@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'jacoco'
+apply plugin: 'application'
+
+
+mainClassName = 'O365.App'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation     'junit:junit:4.13'
+    implementation 'com.azure:azure-identity:1.2.5'
+    implementation 'com.microsoft.graph:microsoft-graph:3.2.0'
+}
+run {
+    standardInput = System.in
+}
